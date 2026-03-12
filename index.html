@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>数字农人帮助中心</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="数字农人平台帮助中心">
+  <meta name="viewport" content="width=device-width, initial-scale=.7, maximum-scale=1.0, minimum-scale=0.5, user-scalable=no">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      name: '数字农人帮助中心', // 页面标题
+      repo: '', // 留空即可
+      loadSidebar: true, // 开启左侧目录
+      loadNavbar: true, // 开启顶部导航
+      search: { // 开启全文搜索
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索关键词（如：登录、佣金）',
+        noData: '未找到结果',
+        depth:4
+      },
+      auto2top: true, // 切换目录回到顶部
+      homepage: 'README.md' // 首页内容文件
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 核心JS -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- 搜索插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 代码高亮 -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
 </body>
 </html>
