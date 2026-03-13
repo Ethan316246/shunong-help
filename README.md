@@ -1,39 +1,78 @@
-# 数字农人帮助中心
+<!-- 顶部大图区域 -->
+<div class="hero-banner">
+  <div class="hero-content">
+    <h1>让企业收购合规更省心，让农户交易简单更安心</h1>
+    <div class="search-box">
+      <input type="text" placeholder="请输入关键词查找" id="hero-search">
+    </div>
+    <div class="hot-search">
+      <span>热门搜索：</span>
+      <a href="#/nonghu">农户端</a>
+      <a href="#/jingji">经纪端</a>
+      <a href="#/qiye">企业端</a>
+      <a href="#/pc">数农助手PC端</a>
+      <a href="#/faq">常见问题</a>
+    </div>
+  </div>
+</div>
+
+<!-- 卡片导航区域 -->
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">📖</div>
+    <h3>一、快速入驻</h3>
+    <ul>
+      <li><a href="#/nonghu">农户端入驻指引</a></li>
+      <li><a href="#/jingji">经纪端入驻指引</a></li>
+      <li><a href="#/qiye">企业端入驻指引</a></li>
+    </ul>
+    <a href="#/quick" class="more-link">查看更多 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">❓</div>
+    <h3>二、常见问题</h3>
+    <ul>
+      <li><a href="#/faq/login">登录问题</a></li>
+      <li><a href="#/faq/commission">佣金结算</a></li>
+      <li><a href="#/faq/compliance">合规安全</a></li>
+    </ul>
+    <a href="#/faq" class="more-link">查看更多 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">👨‍🏫</div>
+    <h3>四、农户端手册</h3>
+    <ul>
+      <li><a href="#/nonghu/auth">实名认证</a></li>
+      <li><a href="#/nonghu/payment">数农码收款</a></li>
+    </ul>
+    <a href="#/nonghu" class="more-link">查看更多 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">👨‍🎓</div>
+    <h3>五、经纪端手册</h3>
+    <ul>
+      <li><a href="#/jingji/order">订单管理</a></li>
+      <li><a href="#/jingji/commission">佣金结算</a></li>
+    </ul>
+    <a href="#/jingji" class="more-link">查看更多 →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">⚙️</div>
+    <h3>六、企业端手册</h3>
+    <ul>
+      <li><a href="#/qiye/open">开户进件</a></li>
+      <li><a href="#/qiye/pay">微信支付配置</a></li>
+    </ul>
+    <a href="#/qiye" class="more-link">查看更多 →</a>
+  </div>
+</div>
+
+<!-- 原有的帮助中心内容（保留） -->
+---
+
+## 数字农人帮助中心
 欢迎使用数字农人平台帮助中心，这里汇总了农户端、经纪端、企业端及数农助手PC端的全量操作指南、版本更新记录和常见问题解答。
-
----
-
-## 🔍 快速检索提示
-可直接搜索以下关键词快速定位问题：
-- 基础操作：登录、实名认证、数农码激活、收款
-- 订单管理：批量建单、取消订单、发票管理、财务对账
-- 佣金相关：佣金规则、结算、提现、权限配置
-- 合规安全：三级等保、风控管控、实名核验
-- 版本功能：农产品合格证、自定义审批、商业版订阅
-
----
-
-## 📋 核心导航
-| 操作端       | 核心功能                          | 快速入口                          |
-|--------------|-----------------------------------|-----------------------------------|
-| 农户端       | 实名认证、数农码收款、合格证生成  | [农户端使用指南](nonghu.md)       |
-| 经纪端       | 订单管理、佣金结算、企业邀约确认  | [经纪端使用指南](jingji.md)       |
-| 企业端       | 开户进件、微信支付配置、财务合规  | [企业端使用指南](qiye.md)         |
-| 数农助手PC端 | 批量建单、审批配置、数据导出      | [数农助手PC端操作手册](pc.md)     |
-
----
-
-## 🚀 版本动态
-最新功能更新、迭代优化及历史版本归档，可查看：[版本迭代记录](version.md)
-
----
-
-## ❓ 常见问题
-高频问题一键解答，覆盖登录、支付、佣金、合规等场景：[常见问题FAQ](faq.md)
-
----
-
-> 温馨提示：若未找到所需内容，可使用页面顶部搜索框输入关键词检索，或联系平台运营人员获取人工支持。
-=======
-# shunong-help
-
