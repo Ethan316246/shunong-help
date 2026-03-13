@@ -19,16 +19,15 @@
 
 <!-- 卡片网格导航区域 -->
 <div class="card-grid">
-  <!-- 卡片1：快速入门 -->
+  <!-- 卡片1：快速入驻 -->
   <div class="card">
     <div class="card-icon">📖</div>
     <h3>一、快速入驻</h3>
     <ul>
-      <li>老师快速开课手册</li>
-      <li>后台管理系统快速操作手册</li>
-      <li>硬件配置要求</li>
+      <li><a href="#/nonghu-ruzhu">农户端入驻指引</a></li>
+      <li><a href="#/jingji-ruzhu">经纪端入驻指引</a></li>
+      <li><a href="#/qiye-ruzhu">企业端入驻指引</a></li>
     </ul>
-    <a href="#/" class="more-link">查看更多 →</a>
   </div>
 
   <!-- 卡片2：常见问题 -->
