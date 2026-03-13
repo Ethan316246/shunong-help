@@ -1,74 +1,157 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>数字农人帮助中心</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
-  <!-- 数字农人品牌样式 -->
   <style>
-    :root {
-      /* 主色调：#07a14f */
-      --theme-color: #07a14f;
-      --sidebar-width: 260px;
-    }
+  /* 全局重置 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", sans-serif;
+  }
 
-    /* 侧边栏样式 */
-    .sidebar {
-      background-color: #ffffff;
-      border-right: 1px solid #e6e6e6;
-    }
-    .sidebar h1 {
-      color: var(--theme-color);
-      font-size: 20px;
-      font-weight: 600;
-      padding: 20px 15px;
-      margin: 0;
-    }
-    .sidebar ul li a {
-      color: #333333;
-      padding: 8px 15px;
-      border-left: 3px solid transparent;
-    }
-    .sidebar ul li a:hover,
-    .sidebar ul li.active > a {
-      color: var(--theme-color);
-      background-color: rgba(7, 161, 79, 0.08);
-      border-left-color: var(--theme-color);
-    }
+  /* 顶部背景图区域 */
+  .hero-banner {
+    width: 100%;
+    height: 400px; /* 匹配参考图高度 */
+    background: url('./images/banner.png') center/cover no-repeat; /* 你的背景图 */
+    position: relative;
+    color: white;
+    margin: -20px -20px 40px -20px;
+  }
 
-    /* 搜索框样式 */
-    .search input {
-      border: 1px solid #d9d9d9;
-      border-radius: 4px;
-      padding: 8px 12px;
-      width: 100%;
-      margin: 15px 0;
-    }
-    .search input:focus {
-      border-color: var(--theme-color);
-      box-shadow: 0 0 0 2px rgba(7, 161, 79, 0.1);
-    }
+  /* 帮助中心顶部小标题 */
+  .hero-header {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 16px;
+    color: #07a14f; /* 参考图的蓝色 */
+    font-weight: 500;
+  }
 
-    /* 内容区标题样式 */
-    .content h1 {
-      color: #262626;
-      border-bottom: 2px solid var(--theme-color);
-      padding-bottom: 10px;
-      margin-top: 0;
-    }
-    .content h2 {
-      color: var(--theme-color);
-    }
+  /* 中间内容区 */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+  }
 
-    /* 链接样式 */
-    .content a {
-      color: var(--theme-color);
-    }
-    .content a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  /* 搜索框样式（匹配参考图） */
+  .search-box {
+    width: 600px;
+    margin: 0 auto 20px;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    outline: none;
+  }
+
+  .search-box input::placeholder {
+    color: #999;
+  }
+
+  /* 热门搜索 */
+  .hot-search {
+    font-size: 14px;
+    color: white;
+  }
+
+  .hot-search span {
+    margin-right: 8px;
+  }
+
+  .hot-search a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+
+  .hot-search a:hover {
+    text-decoration: underline;
+  }
+
+  /* 卡片网格（3列布局，匹配参考图） */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* 增大间距，匹配参考图 */
+    padding: 0 60px;
+    margin-bottom: 60px;
+  }
+
+  /* 卡片样式 */
+  .card {
+    padding: 30px 20px;
+    border: none;
+    border-radius: 0;
+    background: white;
+    box-shadow: none;
+  }
+
+  /* 卡片图标 */
+  .card-icon {
+    font-size: 24px;
+    color: #07a14f; /* 参考图的蓝色图标 */
+    margin-bottom: 16px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 500;
+  }
+
+  /* 卡片列表 */
+  .card ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+  }
+
+  /* 查看更多链接 */
+  .more-link {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+
+  .more-link:hover {
+    color: #07a14f;
+  }
+
+  .content {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+</style>
 </head>
 <body>
   <div id="app"></div>
