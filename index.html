@@ -5,6 +5,70 @@
   <title>数字农人帮助中心</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+  <!-- 数字农人品牌样式 -->
+  <style>
+    :root {
+      /* 主色调：#07a14f */
+      --theme-color: #07a14f;
+      --sidebar-width: 260px;
+    }
+
+    /* 侧边栏样式 */
+    .sidebar {
+      background-color: #ffffff;
+      border-right: 1px solid #e6e6e6;
+    }
+    .sidebar h1 {
+      color: var(--theme-color);
+      font-size: 20px;
+      font-weight: 600;
+      padding: 20px 15px;
+      margin: 0;
+    }
+    .sidebar ul li a {
+      color: #333333;
+      padding: 8px 15px;
+      border-left: 3px solid transparent;
+    }
+    .sidebar ul li a:hover,
+    .sidebar ul li.active > a {
+      color: var(--theme-color);
+      background-color: rgba(7, 161, 79, 0.08);
+      border-left-color: var(--theme-color);
+    }
+
+    /* 搜索框样式 */
+    .search input {
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      padding: 8px 12px;
+      width: 100%;
+      margin: 15px 0;
+    }
+    .search input:focus {
+      border-color: var(--theme-color);
+      box-shadow: 0 0 0 2px rgba(7, 161, 79, 0.1);
+    }
+
+    /* 内容区标题样式 */
+    .content h1 {
+      color: #262626;
+      border-bottom: 2px solid var(--theme-color);
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    .content h2 {
+      color: var(--theme-color);
+    }
+
+    /* 链接样式 */
+    .content a {
+      color: var(--theme-color);
+    }
+    .content a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
